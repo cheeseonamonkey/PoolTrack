@@ -154,12 +154,7 @@ namespace Pol
                 Console.WriteLine(ex.Message);
             }
 
-            if (rdbSortByTime.Checked)
-                SortListByTime();
-            else if (rdbSortByRoom.Checked)
-                SortListByRoom();
-
-            //checkbox stuff here
+            
 
             txtGuest.Clear();
             txtRoomNum.Clear();
