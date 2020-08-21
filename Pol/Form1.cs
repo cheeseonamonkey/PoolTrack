@@ -28,7 +28,13 @@ namespace Pol
 
         private void Form1_Load(object sender, EventArgs e)
         {
+
+            timePicker.Format = DateTimePickerFormat.Custom;
+            timePicker.CustomFormat = "h tt";
+
             formatter = new BinaryFormatter();
+
+            ckbShowOnlyFuture.Checked = false;
 
             datePicker.Value = DateTime.Today;
 
@@ -160,7 +166,6 @@ namespace Pol
             txtRoomNum.Clear();
             datePicker.Value = DateTime.Today;
             timePicker.Text = "9:00:00AM";
-            cmbEmployees.Text = "";
         }
 
 
@@ -205,6 +210,7 @@ namespace Pol
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
+
             foreach(ListViewItem i in listView.Items)
             {
                 try
@@ -233,14 +239,12 @@ namespace Pol
 
         private void rdbSortByTime_CheckedChanged(object sender, EventArgs e)
         {
-            if(rdbSortByTime.Checked)
-                SortListByTime();
+            PopulateList();
         }
 
         private void rdbSortByRoom_CheckedChanged(object sender, EventArgs e)
         {
-            if(rdbSortByRoom.Checked)
-                SortListByRoom();
+            PopulateList();
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -273,10 +277,13 @@ namespace Pol
 
         private void btnComment_Click(object sender, EventArgs e)
         {
-            CommentForm commentForm = new CommentForm();
 
-            commentForm.ShowDialog();
+            if (listView.SelectedItems.Count == 1)
+            {
+                CommentForm commentForm = new CommentForm();
 
+                commentForm.ShowDialog();
+            }
             //will hang until closed,
             
             
@@ -297,6 +304,19 @@ namespace Pol
         private void ckbShowOnlyFuture_CheckedChanged(object sender, EventArgs e)
         {
             PopulateList();
+        }
+
+        private void btnChange_Click(object sender, EventArgs e)
+        {
+            if (listView.SelectedItems.Count == 1)
+            {
+                EditForm editForm = new EditForm();
+
+                editForm.ShowDialog();
+            }
+
+            PopulateList();
+
         }
     }
 }

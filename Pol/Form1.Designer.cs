@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.listView = new System.Windows.Forms.ListView();
             this.colCheckbox = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colWeekday = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -57,6 +58,7 @@
             this.btnLoad = new System.Windows.Forms.Button();
             this.btnManage = new System.Windows.Forms.Button();
             this.ckbShowOnlyFuture = new System.Windows.Forms.CheckBox();
+            this.btnChange = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -72,13 +74,13 @@
             this.colHour,
             this.colEmployee,
             this.colComments});
-            this.listView.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listView.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listView.FullRowSelect = true;
             this.listView.GridLines = true;
             this.listView.HideSelection = false;
             this.listView.Location = new System.Drawing.Point(12, 108);
             this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(861, 297);
+            this.listView.Size = new System.Drawing.Size(901, 343);
             this.listView.TabIndex = 0;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.Details;
@@ -92,7 +94,7 @@
             // colWeekday
             // 
             this.colWeekday.Text = "";
-            this.colWeekday.Width = 75;
+            this.colWeekday.Width = 102;
             // 
             // colDate
             // 
@@ -103,7 +105,7 @@
             // 
             this.colRoomNum.Text = "Room #";
             this.colRoomNum.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.colRoomNum.Width = 62;
+            this.colRoomNum.Width = 70;
             // 
             // colGuest
             // 
@@ -113,7 +115,7 @@
             // colHour
             // 
             this.colHour.Text = "Hour";
-            this.colHour.Width = 65;
+            this.colHour.Width = 80;
             // 
             // colEmployee
             // 
@@ -123,10 +125,11 @@
             // colComments
             // 
             this.colComments.Text = "Comments";
-            this.colComments.Width = 341;
+            this.colComments.Width = 325;
             // 
             // panel1
             // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.cmbEmployees);
             this.panel1.Controls.Add(this.btnAdd);
@@ -144,10 +147,10 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(291, 24);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(62, 15);
+            this.label3.Size = new System.Drawing.Size(70, 17);
             this.label3.TabIndex = 8;
             this.label3.Text = "Employee";
             // 
@@ -231,8 +234,8 @@
             // 
             // btnDelete
             // 
-            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(12, 411);
+            this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDelete.Location = new System.Drawing.Point(12, 457);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(81, 35);
             this.btnDelete.TabIndex = 2;
@@ -292,10 +295,10 @@
             // 
             // btnComment
             // 
-            this.btnComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComment.Location = new System.Drawing.Point(792, 411);
+            this.btnComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComment.Location = new System.Drawing.Point(826, 457);
             this.btnComment.Name = "btnComment";
-            this.btnComment.Size = new System.Drawing.Size(81, 35);
+            this.btnComment.Size = new System.Drawing.Size(87, 35);
             this.btnComment.TabIndex = 5;
             this.btnComment.Text = "Comment";
             this.btnComment.UseVisualStyleBackColor = true;
@@ -303,7 +306,7 @@
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(8, 505);
+            this.btnSave.Location = new System.Drawing.Point(12, 526);
             this.btnSave.Name = "btnSave";
             this.btnSave.Size = new System.Drawing.Size(62, 37);
             this.btnSave.TabIndex = 6;
@@ -313,7 +316,7 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(76, 505);
+            this.btnLoad.Location = new System.Drawing.Point(80, 526);
             this.btnLoad.Name = "btnLoad";
             this.btnLoad.Size = new System.Drawing.Size(60, 37);
             this.btnLoad.TabIndex = 7;
@@ -323,7 +326,7 @@
             // 
             // btnManage
             // 
-            this.btnManage.Location = new System.Drawing.Point(776, 505);
+            this.btnManage.Location = new System.Drawing.Point(816, 526);
             this.btnManage.Name = "btnManage";
             this.btnManage.Size = new System.Drawing.Size(97, 37);
             this.btnManage.TabIndex = 8;
@@ -345,11 +348,24 @@
             this.ckbShowOnlyFuture.UseVisualStyleBackColor = true;
             this.ckbShowOnlyFuture.CheckedChanged += new System.EventHandler(this.ckbShowOnlyFuture_CheckedChanged);
             // 
+            // btnChange
+            // 
+            this.btnChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnChange.Location = new System.Drawing.Point(719, 457);
+            this.btnChange.Name = "btnChange";
+            this.btnChange.Size = new System.Drawing.Size(81, 35);
+            this.btnChange.TabIndex = 11;
+            this.btnChange.Text = "Change";
+            this.btnChange.UseVisualStyleBackColor = true;
+            this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(885, 554);
+            this.BackColor = System.Drawing.Color.GhostWhite;
+            this.ClientSize = new System.Drawing.Size(917, 567);
+            this.Controls.Add(this.btnChange);
             this.Controls.Add(this.ckbShowOnlyFuture);
             this.Controls.Add(this.btnManage);
             this.Controls.Add(this.btnLoad);
@@ -360,6 +376,7 @@
             this.Controls.Add(this.btnDelete);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.listView);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.Text = "Pool Reservations";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -403,6 +420,7 @@
         private System.Windows.Forms.Button btnLoad;
         private System.Windows.Forms.Button btnManage;
         private System.Windows.Forms.CheckBox ckbShowOnlyFuture;
+        private System.Windows.Forms.Button btnChange;
     }
 }
 
