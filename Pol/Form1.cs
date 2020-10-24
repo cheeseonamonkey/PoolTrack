@@ -50,6 +50,7 @@ namespace Pol
 
         }
 
+        //populate the whole list
         public void PopulateList()
         {
 
@@ -110,6 +111,7 @@ namespace Pol
 
         }
 
+        //add each individual reservation 
         public void AddResToList(Reservation res)
         {
             ListViewItem item = new ListViewItem();
@@ -126,41 +128,68 @@ namespace Pol
             
         }
 
+        //add button==========================================================================
         private void btnAdd_Click(object sender, EventArgs e)
         {
             try
             {
+
+               
+
                 if (txtRoomNum.Text.Equals(""))
                 {
                     //alert here?
                     throw new Exception("Error - Must include room #");
                 }
+
+
                 int room = int.Parse(txtRoomNum.Text);
-
-                
-                
                 string guest = txtGuest.Text;
-
                 DateTime dateTime = new DateTime(datePicker.Value.Year, datePicker.Value.Month, datePicker.Value.Day, timePicker.Value.Hour, timePicker.Value.Minute, timePicker.Value.Second);
-                
-                
-
                 string employee = cmbEmployees.Text;
 
-                Program.reservationList.Add(new Reservation(dateTime, room, guest, employee));
+                bool makeResBool = false;
+
+                foreach (var v in Program.reservationList)
+                {
+
+                    if (v.ResTime.Equals(dateTime))
+                    {
+                        DialogResult dialogResult = MessageBox.Show($"One or more reservations already exist at this time:\n" +
+                            $"\tRoom #{room}\n" +
+                            $"\tat {dateTime.TimeOfDay}\n" +
+                            "\nDo you want to make the reservation anyway?", "Duplicate Reservation!", MessageBoxButtons.YesNo);
+                        if (dialogResult == DialogResult.Yes)
+                        {
+                            makeResBool = true;
+                        }
+                        else if (dialogResult == DialogResult.No)
+                        {
+                            makeResBool = false;
+                            break; //breaks so only 1 dialog comes up
+
+                        }
+
+                    }
+                }
+
+                if (makeResBool)
+                {
+                    Program.reservationList.Add(new Reservation(dateTime, room, guest, employee));
+
+                    PopulateList();
+
+                    Program.SaveLists();
+                }
 
 
-                PopulateList();
 
-                Program.SaveLists();
-
-
-            }catch(Exception ex)
+            }
+            catch(Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
 
-            
 
             txtGuest.Clear();
             txtRoomNum.Clear();
@@ -168,7 +197,7 @@ namespace Pol
             timePicker.Text = "9:00:00AM";
         }
 
-
+        //sorting checkboxes
         public void SortListByRoom()
         {
             listView.Items.Clear();
@@ -185,7 +214,7 @@ namespace Pol
                 AddResToList(res);
             }
         }
-
+        //sorting checkboxes
         public void SortListByTime()
         {
             listView.Items.Clear();
@@ -206,8 +235,8 @@ namespace Pol
             
         }
 
-        
 
+        //delete button==========================================================================
         private void btnDelete_Click(object sender, EventArgs e)
         {
 
