@@ -163,7 +163,7 @@ namespace Pol
                     DateTime dateTime = new DateTime(datePicker.Value.Year, datePicker.Value.Month, datePicker.Value.Day, timePicker.Value.Hour, timePicker.Value.Minute, timePicker.Value.Second);
                     string employee = cmbEmployees.Text;
 
-                    bool makeResBool = false;
+                    bool makeResBool = true;
 
                     foreach (var v in Program.reservationList)
                     {
