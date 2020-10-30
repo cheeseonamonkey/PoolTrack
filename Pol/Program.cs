@@ -7,7 +7,7 @@ using System.IO;
 
 using Newtonsoft.Json;
 
-namespace Pol
+namespace Pol 
 {
     static class Program
     {
