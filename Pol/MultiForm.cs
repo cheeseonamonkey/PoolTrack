@@ -21,7 +21,7 @@ namespace Pol
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            
+
         }
 
         private void datePicker1_ValueChanged(object sender, EventArgs e) => DrawTimes();
@@ -34,7 +34,7 @@ namespace Pol
 
         private void DrawTimes()
         {
-            
+
 
 
             pnlTimes.Controls.Clear();
@@ -46,15 +46,16 @@ namespace Pol
 
             pnlTimes.RowCount = rows;
 
-            
+
 
             for (int i = 0; i < rows; i++)
             {
                 DateTime currentDay = date1.AddDays(i);
 
-                pnlTimes.Controls.Add(new Label() { Text = $"{currentDay.Month}/{currentDay.Day}/{currentDay.Year}"});
+                pnlTimes.Controls.Add(new Label() { Text = $"{currentDay.DayOfWeek}" });
+                pnlTimes.Controls.Add(new Label() { Text = $"{currentDay.Month}/{currentDay.Day}/{currentDay.Year}" });
 
-                pnlTimes.Controls.Add(new DateTimePicker() {Format = DateTimePickerFormat.Time, ShowUpDown = true, CustomFormat = "h tt", Text = "9:00:00AM" });
+                pnlTimes.Controls.Add(new DateTimePicker() { Format = DateTimePickerFormat.Custom, ShowUpDown = true, CustomFormat = "h tt", Text = "9:00:00AM" });
 
 
             }
@@ -62,11 +63,12 @@ namespace Pol
 
         private void MultiForm_Load(object sender, EventArgs e)
         {
+
             setAllTimePicker.Format = DateTimePickerFormat.Custom;
             setAllTimePicker.CustomFormat = "h tt";
-            setAllTimePicker.Text = "9:00:00AM";
+
+            DrawTimes();
         }
 
-        
     }
 }
