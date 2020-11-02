@@ -300,6 +300,7 @@ namespace Pol
             private void btnLoad_Click(object sender, EventArgs e)
             {
                 Program.LoadLists();
+                PopulateList();
             }
 
             private void btnManage_Click(object sender, EventArgs e)
