@@ -13,6 +13,8 @@ namespace Pol
 {
     public partial class MultiForm : Form
     {
+        List<DateTimePicker> timePickerList;
+
         public MultiForm()
         {
             InitializeComponent();
@@ -40,6 +42,9 @@ namespace Pol
             pnlTimes.Controls.Clear();
             DateTime date1 = datePicker1.Value.Date;
             DateTime date2 = datePicker2.Value.Date;
+            
+            timePickerList = new List<DateTimePicker>();
+            timePickerList.Clear();
 
             //need error checking on this date subtract
             int rows = date2.Subtract(date1).Days + 1;
@@ -54,21 +59,31 @@ namespace Pol
 
                 pnlTimes.Controls.Add(new Label() { Text = $"{currentDay.DayOfWeek}" });
                 pnlTimes.Controls.Add(new Label() { Text = $"{currentDay.Month}/{currentDay.Day}/{currentDay.Year}" });
-
-                pnlTimes.Controls.Add(new DateTimePicker() { Format = DateTimePickerFormat.Custom, ShowUpDown = true, CustomFormat = "h tt", Text = "9:00:00AM" });
+                timePickerList.Add(new DateTimePicker() { Width = 90, Format = DateTimePickerFormat.Custom, ShowUpDown = true, CustomFormat = "h tt", Text = "9:00:00AM" });
+                pnlTimes.Controls.Add(timePickerList.Last());
 
 
             }
         }
 
-        private void MultiForm_Load(object sender, EventArgs e)
-        {
 
+
+        private void MultiForm_Load_1(object sender, EventArgs e)
+        {
+            DrawTimes();
             setAllTimePicker.Format = DateTimePickerFormat.Custom;
             setAllTimePicker.CustomFormat = "h tt";
+            setAllTimePicker.Text = "9:00:00AM";
 
-            DrawTimes();
         }
 
+        private void btnSetAll_Click(object sender, EventArgs e)
+        {
+            foreach(var v in timePickerList)
+            {
+                v.Text = setAllTimePicker.Text;
+
+            }
+        }
     }
 }
