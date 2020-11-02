@@ -62,7 +62,7 @@ namespace Pol
                 timePickerList.Add(new DateTimePicker() { Width = 90, Format = DateTimePickerFormat.Custom, ShowUpDown = true, CustomFormat = "h tt", Text = "9:00:00AM" });
                 pnlTimes.Controls.Add(timePickerList.Last());
 
-
+                 
             }
         }
 
