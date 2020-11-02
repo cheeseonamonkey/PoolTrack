@@ -59,7 +59,7 @@
             this.btnManage = new System.Windows.Forms.Button();
             this.ckbShowOnlyFuture = new System.Windows.Forms.CheckBox();
             this.btnChange = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnMulti = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -352,7 +352,7 @@
             // btnChange
             // 
             this.btnChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChange.Location = new System.Drawing.Point(719, 457);
+            this.btnChange.Location = new System.Drawing.Point(739, 457);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(81, 35);
             this.btnChange.TabIndex = 11;
@@ -360,15 +360,16 @@
             this.btnChange.UseVisualStyleBackColor = true;
             this.btnChange.Click += new System.EventHandler(this.btnChange_Click);
             // 
-            // button1
+            // btnMulti
             // 
-            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(99, 457);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(81, 35);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Delete";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnMulti.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMulti.Location = new System.Drawing.Point(99, 457);
+            this.btnMulti.Name = "btnMulti";
+            this.btnMulti.Size = new System.Drawing.Size(81, 35);
+            this.btnMulti.TabIndex = 12;
+            this.btnMulti.Text = "Add stay";
+            this.btnMulti.UseVisualStyleBackColor = true;
+            this.btnMulti.Click += new System.EventHandler(this.btnMulti_Click);
             // 
             // Form1
             // 
@@ -376,7 +377,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(917, 567);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnMulti);
             this.Controls.Add(this.btnChange);
             this.Controls.Add(this.ckbShowOnlyFuture);
             this.Controls.Add(this.btnManage);
@@ -435,7 +436,7 @@
         private System.Windows.Forms.Button btnManage;
         private System.Windows.Forms.CheckBox ckbShowOnlyFuture;
         private System.Windows.Forms.Button btnChange;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnMulti;
     }
 }
 

@@ -365,6 +365,12 @@ namespace Pol
 
             }
 
-
+        private void btnMulti_Click(object sender, EventArgs e)
+        {
+            MultiForm multiForm = new MultiForm();
+            multiForm.ShowDialog();
         }
+
+        
     }
+}
