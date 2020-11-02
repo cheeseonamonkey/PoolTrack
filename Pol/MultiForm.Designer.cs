@@ -104,6 +104,7 @@
             // pnlTimes
             // 
             this.pnlTimes.Anchor = System.Windows.Forms.AnchorStyles.Left;
+            this.pnlTimes.AutoScroll = true;
             this.pnlTimes.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pnlTimes.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
             this.pnlTimes.ColumnCount = 2;
@@ -114,7 +115,7 @@
             this.pnlTimes.Name = "pnlTimes";
             this.pnlTimes.RowCount = 1;
             this.pnlTimes.RowStyles.Add(new System.Windows.Forms.RowStyle());
-            this.pnlTimes.Size = new System.Drawing.Size(372, 123);
+            this.pnlTimes.Size = new System.Drawing.Size(395, 123);
             this.pnlTimes.TabIndex = 9;
             // 
             // groupBox1
