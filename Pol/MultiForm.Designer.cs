@@ -52,7 +52,7 @@
             // 
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(465, 296);
+            this.btnAdd.Location = new System.Drawing.Point(600, 297);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(79, 34);
             this.btnAdd.TabIndex = 7;
@@ -84,7 +84,7 @@
             this.setAllTimePicker.CustomFormat = "";
             this.setAllTimePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.setAllTimePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.setAllTimePicker.Location = new System.Drawing.Point(117, 288);
+            this.setAllTimePicker.Location = new System.Drawing.Point(243, 130);
             this.setAllTimePicker.MaxDate = new System.DateTime(2029, 12, 31, 0, 0, 0, 0);
             this.setAllTimePicker.MinDate = new System.DateTime(2020, 7, 1, 0, 0, 0, 0);
             this.setAllTimePicker.Name = "setAllTimePicker";
@@ -95,7 +95,7 @@
             // 
             // btnSetAll
             // 
-            this.btnSetAll.Location = new System.Drawing.Point(218, 288);
+            this.btnSetAll.Location = new System.Drawing.Point(344, 130);
             this.btnSetAll.Name = "btnSetAll";
             this.btnSetAll.Size = new System.Drawing.Size(75, 23);
             this.btnSetAll.TabIndex = 14;
@@ -109,9 +109,9 @@
             this.pnlTimes.BackColor = System.Drawing.SystemColors.ControlLight;
             this.pnlTimes.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.OutsetPartial;
             this.pnlTimes.ColumnCount = 3;
-            this.pnlTimes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.pnlTimes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25F));
-            this.pnlTimes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50F));
+            this.pnlTimes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.pnlTimes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20F));
+            this.pnlTimes.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
             this.pnlTimes.GrowStyle = System.Windows.Forms.TableLayoutPanelGrowStyle.FixedSize;
             this.pnlTimes.Location = new System.Drawing.Point(27, 159);
             this.pnlTimes.Name = "pnlTimes";
