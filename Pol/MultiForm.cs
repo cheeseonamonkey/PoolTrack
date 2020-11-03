@@ -34,36 +34,45 @@ namespace Pol
         //timePicker.Format = DateTimePickerFormat.Custom;
         //timePicker.CustomFormat = "h tt";
 
-        private void DrawTimes()
+        private async void DrawTimes()
         {
 
 
-
-            pnlTimes.Controls.Clear();
+            //should async this?
+           
             DateTime date1 = datePicker1.Value.Date;
             DateTime date2 = datePicker2.Value.Date;
+
+             //need error checking on this date subtract
+            int rows = date2.Subtract(date1).Days + 1;
+
             
             timePickerList = new List<DateTimePicker>();
             timePickerList.Clear();
+            pnlTimes.Controls.Clear();
 
-            //need error checking on this date subtract
-            int rows = date2.Subtract(date1).Days + 1;
 
             pnlTimes.RowCount = rows;
 
-
-
+        //    if (rows > 7)
+         //       lblPleaseWait.Visible = true;
+           
             for (int i = 0; i < rows; i++)
             {
                 DateTime currentDay = date1.AddDays(i);
-
-                pnlTimes.Controls.Add(new Label() { Text = $"{currentDay.DayOfWeek}" });
-                pnlTimes.Controls.Add(new Label() { Text = $"{currentDay.Month}/{currentDay.Day}/{currentDay.Year}" });
+                pnlTimes.Controls.Add(new Label() { Text = $"{currentDay.DayOfWeek}" }, 0, i);
+                pnlTimes.Controls.Add(new Label() { Text = $"{currentDay.Month}/{currentDay.Day}/{currentDay.Year}" }, 1, i);
                 timePickerList.Add(new DateTimePicker() { Width = 90, Format = DateTimePickerFormat.Custom, ShowUpDown = true, CustomFormat = "h tt", Text = "9:00:00AM" });
-                pnlTimes.Controls.Add(timePickerList.Last());
 
-                 
+
             }
+
+            for (int i = 0; i < rows; i++)
+                pnlTimes.Controls.Add(timePickerList[i]);
+
+
+
+        //    lblPleaseWait.Visible = false;
         }
 
 
