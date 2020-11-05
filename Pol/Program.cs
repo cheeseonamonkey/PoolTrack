@@ -17,6 +17,26 @@ namespace Pol
 
         static public List<Reservation> reservationList = new List<Reservation>();
 
+        public static bool IsExistingDuplicateReservation(DateTime dateTime)
+        {
+            foreach (Reservation r in Program.reservationList)
+                if (r.ResTime.Equals(dateTime))
+                    return true;
+
+            return false;
+        }
+        public static bool IsExistingDuplicateReservation(Reservation newRes)
+        {
+            foreach (Reservation r in Program.reservationList)
+                    if (r.ResTime.Equals(newRes.ResTime))
+                        return true;
+
+            return false;
+        }
+                
+
+                    
+
         public static void SaveLists()
         {
 

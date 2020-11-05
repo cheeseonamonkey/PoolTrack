@@ -60,6 +60,8 @@
             this.ckbShowOnlyFuture = new System.Windows.Forms.CheckBox();
             this.btnChange = new System.Windows.Forms.Button();
             this.btnMulti = new System.Windows.Forms.Button();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -79,7 +81,7 @@
             this.listView.FullRowSelect = true;
             this.listView.GridLines = true;
             this.listView.HideSelection = false;
-            this.listView.Location = new System.Drawing.Point(12, 108);
+            this.listView.Location = new System.Drawing.Point(12, 119);
             this.listView.Name = "listView";
             this.listView.Size = new System.Drawing.Size(901, 343);
             this.listView.TabIndex = 0;
@@ -131,6 +133,8 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.linkLabel2);
+            this.panel1.Controls.Add(this.linkLabel1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.cmbEmployees);
             this.panel1.Controls.Add(this.btnAdd);
@@ -140,16 +144,16 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtGuest);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(12, 12);
+            this.panel1.Location = new System.Drawing.Point(12, 9);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(546, 81);
+            this.panel1.Size = new System.Drawing.Size(546, 90);
             this.panel1.TabIndex = 1;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(291, 24);
+            this.label3.Location = new System.Drawing.Point(291, 35);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(70, 17);
             this.label3.TabIndex = 8;
@@ -159,7 +163,7 @@
             // 
             this.cmbEmployees.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbEmployees.FormattingEnabled = true;
-            this.cmbEmployees.Location = new System.Drawing.Point(294, 42);
+            this.cmbEmployees.Location = new System.Drawing.Point(294, 53);
             this.cmbEmployees.Name = "cmbEmployees";
             this.cmbEmployees.Size = new System.Drawing.Size(100, 24);
             this.cmbEmployees.TabIndex = 6;
@@ -167,7 +171,7 @@
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(454, 35);
+            this.btnAdd.Location = new System.Drawing.Point(454, 46);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(79, 34);
             this.btnAdd.TabIndex = 7;
@@ -179,7 +183,7 @@
             // 
             this.datePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.datePicker.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.datePicker.Location = new System.Drawing.Point(175, 14);
+            this.datePicker.Location = new System.Drawing.Point(175, 25);
             this.datePicker.Name = "datePicker";
             this.datePicker.Size = new System.Drawing.Size(102, 23);
             this.datePicker.TabIndex = 4;
@@ -188,7 +192,7 @@
             // 
             this.timePicker.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.timePicker.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.timePicker.Location = new System.Drawing.Point(175, 42);
+            this.timePicker.Location = new System.Drawing.Point(175, 53);
             this.timePicker.MaxDate = new System.DateTime(2029, 12, 31, 0, 0, 0, 0);
             this.timePicker.MinDate = new System.DateTime(2020, 7, 1, 0, 0, 0, 0);
             this.timePicker.Name = "timePicker";
@@ -200,7 +204,7 @@
             // txtRoomNum
             // 
             this.txtRoomNum.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtRoomNum.Location = new System.Drawing.Point(63, 14);
+            this.txtRoomNum.Location = new System.Drawing.Point(63, 25);
             this.txtRoomNum.Name = "txtRoomNum";
             this.txtRoomNum.Size = new System.Drawing.Size(44, 23);
             this.txtRoomNum.TabIndex = 0;
@@ -209,7 +213,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(3, 46);
+            this.label2.Location = new System.Drawing.Point(3, 57);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(46, 17);
             this.label2.TabIndex = 3;
@@ -218,7 +222,7 @@
             // txtGuest
             // 
             this.txtGuest.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtGuest.Location = new System.Drawing.Point(63, 43);
+            this.txtGuest.Location = new System.Drawing.Point(63, 54);
             this.txtGuest.Name = "txtGuest";
             this.txtGuest.Size = new System.Drawing.Size(100, 23);
             this.txtGuest.TabIndex = 2;
@@ -227,7 +231,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 17);
+            this.label1.Location = new System.Drawing.Point(3, 28);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(57, 17);
             this.label1.TabIndex = 1;
@@ -236,7 +240,7 @@
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(12, 457);
+            this.btnDelete.Location = new System.Drawing.Point(12, 468);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(81, 35);
             this.btnDelete.TabIndex = 2;
@@ -247,10 +251,10 @@
             // ckbShowOnlyToday
             // 
             this.ckbShowOnlyToday.AutoSize = true;
-            this.ckbShowOnlyToday.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbShowOnlyToday.Location = new System.Drawing.Point(570, 81);
+            this.ckbShowOnlyToday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbShowOnlyToday.Location = new System.Drawing.Point(570, 86);
             this.ckbShowOnlyToday.Name = "ckbShowOnlyToday";
-            this.ckbShowOnlyToday.Size = new System.Drawing.Size(130, 21);
+            this.ckbShowOnlyToday.Size = new System.Drawing.Size(136, 22);
             this.ckbShowOnlyToday.TabIndex = 3;
             this.ckbShowOnlyToday.Text = "Show only today";
             this.ckbShowOnlyToday.UseVisualStyleBackColor = true;
@@ -263,7 +267,7 @@
             this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox1.Location = new System.Drawing.Point(564, 9);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(274, 69);
+            this.groupBox1.Size = new System.Drawing.Size(136, 69);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sort";
@@ -271,10 +275,10 @@
             // rdbSortByRoom
             // 
             this.rdbSortByRoom.AutoSize = true;
-            this.rdbSortByRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbSortByRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbSortByRoom.Location = new System.Drawing.Point(6, 42);
             this.rdbSortByRoom.Name = "rdbSortByRoom";
-            this.rdbSortByRoom.Size = new System.Drawing.Size(102, 20);
+            this.rdbSortByRoom.Size = new System.Drawing.Size(94, 19);
             this.rdbSortByRoom.TabIndex = 1;
             this.rdbSortByRoom.Text = "Sort by room";
             this.rdbSortByRoom.UseVisualStyleBackColor = true;
@@ -284,10 +288,10 @@
             // 
             this.rdbSortByTime.AutoSize = true;
             this.rdbSortByTime.Checked = true;
-            this.rdbSortByTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbSortByTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbSortByTime.Location = new System.Drawing.Point(6, 17);
             this.rdbSortByTime.Name = "rdbSortByTime";
-            this.rdbSortByTime.Size = new System.Drawing.Size(96, 20);
+            this.rdbSortByTime.Size = new System.Drawing.Size(101, 21);
             this.rdbSortByTime.TabIndex = 0;
             this.rdbSortByTime.TabStop = true;
             this.rdbSortByTime.Text = "Sort by time";
@@ -297,7 +301,7 @@
             // btnComment
             // 
             this.btnComment.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComment.Location = new System.Drawing.Point(826, 457);
+            this.btnComment.Location = new System.Drawing.Point(826, 468);
             this.btnComment.Name = "btnComment";
             this.btnComment.Size = new System.Drawing.Size(87, 35);
             this.btnComment.TabIndex = 5;
@@ -340,10 +344,10 @@
             this.ckbShowOnlyFuture.AutoSize = true;
             this.ckbShowOnlyFuture.Checked = true;
             this.ckbShowOnlyFuture.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ckbShowOnlyFuture.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbShowOnlyFuture.Location = new System.Drawing.Point(706, 81);
+            this.ckbShowOnlyFuture.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ckbShowOnlyFuture.Location = new System.Drawing.Point(706, 86);
             this.ckbShowOnlyFuture.Name = "ckbShowOnlyFuture";
-            this.ckbShowOnlyFuture.Size = new System.Drawing.Size(132, 21);
+            this.ckbShowOnlyFuture.Size = new System.Drawing.Size(137, 22);
             this.ckbShowOnlyFuture.TabIndex = 10;
             this.ckbShowOnlyFuture.Text = "Show only future";
             this.ckbShowOnlyFuture.UseVisualStyleBackColor = true;
@@ -352,7 +356,7 @@
             // btnChange
             // 
             this.btnChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChange.Location = new System.Drawing.Point(739, 457);
+            this.btnChange.Location = new System.Drawing.Point(739, 468);
             this.btnChange.Name = "btnChange";
             this.btnChange.Size = new System.Drawing.Size(81, 35);
             this.btnChange.TabIndex = 11;
@@ -362,14 +366,35 @@
             // 
             // btnMulti
             // 
-            this.btnMulti.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMulti.Location = new System.Drawing.Point(99, 457);
+            this.btnMulti.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnMulti.Location = new System.Drawing.Point(112, 468);
             this.btnMulti.Name = "btnMulti";
-            this.btnMulti.Size = new System.Drawing.Size(81, 35);
+            this.btnMulti.Size = new System.Drawing.Size(81, 41);
             this.btnMulti.TabIndex = 12;
-            this.btnMulti.Text = "Add stay";
+            this.btnMulti.Text = "Add many days";
             this.btnMulti.UseVisualStyleBackColor = true;
             this.btnMulti.Click += new System.EventHandler(this.btnMulti_Click);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Location = new System.Drawing.Point(172, 6);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(37, 13);
+            this.linkLabel1.TabIndex = 9;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Today";
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Location = new System.Drawing.Point(223, 6);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(54, 13);
+            this.linkLabel2.TabIndex = 10;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Tomorrow";
             // 
             // Form1
             // 
@@ -437,6 +462,8 @@
         private System.Windows.Forms.CheckBox ckbShowOnlyFuture;
         private System.Windows.Forms.Button btnChange;
         private System.Windows.Forms.Button btnMulti;
+        private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.LinkLabel linkLabel1;
     }
 }
 
