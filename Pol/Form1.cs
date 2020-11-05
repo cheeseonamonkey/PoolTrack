@@ -381,11 +381,12 @@ namespace Pol
             PopulateList();
         }
 
+        //todo: both these sloppy control/method names :
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             datePicker.Value = DateTime.Today;
         }
-
+        //:
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             datePicker.Value = DateTime.Today.AddDays(1);
@@ -394,6 +395,17 @@ namespace Pol
         private void datePicker_ValueChanged(object sender, EventArgs e)
         {
             UpdateAvailabilityLabel();
+
+            if(datePicker.Value.Date.CompareTo(DateTime.Now.Date) == 0)
+                linkLabel1.LinkVisited = true;
+            else
+                linkLabel1.LinkVisited = false;
+
+            if (datePicker.Value.Date.CompareTo(DateTime.Now.Date.AddDays(1)) == 0)
+                linkLabel2.LinkVisited = true;
+            else
+                linkLabel2.LinkVisited = false;
+
         }
         public void UpdateAvailabilityLabel()
         {
@@ -418,5 +430,7 @@ namespace Pol
         {
             UpdateAvailabilityLabel();
         }
+
+        
     }
 }

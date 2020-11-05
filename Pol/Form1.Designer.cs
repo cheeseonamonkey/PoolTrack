@@ -39,6 +39,8 @@
             this.colEmployee = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colComments = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.label3 = new System.Windows.Forms.Label();
             this.cmbEmployees = new System.Windows.Forms.ComboBox();
             this.btnAdd = new System.Windows.Forms.Button();
@@ -48,6 +50,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtGuest = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.lblAvailable = new System.Windows.Forms.Label();
+            this.lblUnavailable = new System.Windows.Forms.Label();
             this.btnDelete = new System.Windows.Forms.Button();
             this.ckbShowOnlyToday = new System.Windows.Forms.CheckBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -60,11 +64,7 @@
             this.ckbShowOnlyFuture = new System.Windows.Forms.CheckBox();
             this.btnChange = new System.Windows.Forms.Button();
             this.btnMulti = new System.Windows.Forms.Button();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.lblCount = new System.Windows.Forms.Label();
-            this.lblAvailable = new System.Windows.Forms.Label();
-            this.lblUnavailable = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -153,6 +153,33 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(516, 99);
             this.panel1.TabIndex = 1;
+            // 
+            // linkLabel2
+            // 
+            this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.linkLabel2.AutoSize = true;
+            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel2.Location = new System.Drawing.Point(224, 10);
+            this.linkLabel2.Name = "linkLabel2";
+            this.linkLabel2.Size = new System.Drawing.Size(52, 13);
+            this.linkLabel2.TabIndex = 10;
+            this.linkLabel2.TabStop = true;
+            this.linkLabel2.Text = "Tomorrow";
+            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
+            // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.LinkVisited = true;
+            this.linkLabel1.Location = new System.Drawing.Point(172, 10);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(35, 13);
+            this.linkLabel1.TabIndex = 9;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Today";
+            this.linkLabel1.VisitedLinkColor = System.Drawing.Color.Purple;
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
             // 
             // label3
             // 
@@ -243,6 +270,28 @@
             this.label1.Size = new System.Drawing.Size(57, 17);
             this.label1.TabIndex = 1;
             this.label1.Text = "Room #";
+            // 
+            // lblAvailable
+            // 
+            this.lblAvailable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblAvailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvailable.Location = new System.Drawing.Point(205, 78);
+            this.lblAvailable.Name = "lblAvailable";
+            this.lblAvailable.Size = new System.Drawing.Size(65, 12);
+            this.lblAvailable.TabIndex = 14;
+            this.lblAvailable.Text = "Available";
+            this.lblAvailable.Visible = false;
+            // 
+            // lblUnavailable
+            // 
+            this.lblUnavailable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.lblUnavailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUnavailable.Location = new System.Drawing.Point(205, 79);
+            this.lblUnavailable.Name = "lblUnavailable";
+            this.lblUnavailable.Size = new System.Drawing.Size(65, 12);
+            this.lblUnavailable.TabIndex = 15;
+            this.lblUnavailable.Text = "Unavailable";
+            this.lblUnavailable.Visible = false;
             // 
             // btnDelete
             // 
@@ -387,31 +436,6 @@
             this.btnMulti.UseVisualStyleBackColor = true;
             this.btnMulti.Click += new System.EventHandler(this.btnMulti_Click);
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.Location = new System.Drawing.Point(172, 10);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(35, 13);
-            this.linkLabel1.TabIndex = 9;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Today";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // linkLabel2
-            // 
-            this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel2.Location = new System.Drawing.Point(224, 10);
-            this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(52, 13);
-            this.linkLabel2.TabIndex = 10;
-            this.linkLabel2.TabStop = true;
-            this.linkLabel2.Text = "Tomorrow";
-            this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
-            // 
             // lblCount
             // 
             this.lblCount.AutoSize = true;
@@ -421,28 +445,6 @@
             this.lblCount.Size = new System.Drawing.Size(57, 13);
             this.lblCount.TabIndex = 13;
             this.lblCount.Text = "Showing 0";
-            // 
-            // lblAvailable
-            // 
-            this.lblAvailable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
-            this.lblAvailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblAvailable.Location = new System.Drawing.Point(201, 78);
-            this.lblAvailable.Name = "lblAvailable";
-            this.lblAvailable.Size = new System.Drawing.Size(65, 12);
-            this.lblAvailable.TabIndex = 14;
-            this.lblAvailable.Text = "Available";
-            this.lblAvailable.Visible = false;
-            // 
-            // lblUnavailable
-            // 
-            this.lblUnavailable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
-            this.lblUnavailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblUnavailable.Location = new System.Drawing.Point(201, 79);
-            this.lblUnavailable.Name = "lblUnavailable";
-            this.lblUnavailable.Size = new System.Drawing.Size(65, 12);
-            this.lblUnavailable.TabIndex = 15;
-            this.lblUnavailable.Text = "Unavailable";
-            this.lblUnavailable.Visible = false;
             // 
             // Form1
             // 
