@@ -61,6 +61,8 @@ namespace Pol
 
                 timePicker.Text = "9:00:00AM";
 
+                UpdateAvailabilityLabel();
+
             }
             catch (Exception exc) { }
         }
@@ -70,6 +72,7 @@ namespace Pol
         {
 
             listView.Items.Clear();
+
 
 
 
@@ -123,6 +126,11 @@ namespace Pol
 
             }
 
+
+            int numItems = listView.Items.Count;
+            lblCount.Text = $"Showing {numItems, -2}";
+
+            
 
         }
 
@@ -383,6 +391,34 @@ namespace Pol
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             datePicker.Value = DateTime.Today.AddDays(1);
+        }
+
+        private void datePicker_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateAvailabilityLabel();
+        }
+        public void UpdateAvailabilityLabel()
+        {
+            try
+            {
+                if (Program.IsExistingDuplicateReservation(new DateTime(datePicker.Value.Year, datePicker.Value.Month, datePicker.Value.Day, timePicker.Value.Hour, timePicker.Value.Minute, timePicker.Value.Second)))
+                {
+                    lblAvailable.Visible = false;
+                    lblUnavailable.Visible = true;
+                }
+                else
+                {
+                    lblAvailable.Visible = true;
+                    lblUnavailable.Visible = false;
+                }
+            }catch(Exception e)
+            {
+
+            }
+        }
+        private void timePicker_ValueChanged(object sender, EventArgs e)
+        {
+            UpdateAvailabilityLabel();
         }
     }
 }

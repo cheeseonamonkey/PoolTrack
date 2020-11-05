@@ -55,7 +55,7 @@
             // 
             this.btnAdd.Cursor = System.Windows.Forms.Cursors.Default;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(380, 428);
+            this.btnAdd.Location = new System.Drawing.Point(326, 399);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(79, 34);
             this.btnAdd.TabIndex = 7;
@@ -68,13 +68,14 @@
             this.panel1.AutoScrollMargin = new System.Drawing.Size(25, 25);
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.btnAdd);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.setAllTimePicker);
             this.panel1.Controls.Add(this.pnlTimes);
             this.panel1.Controls.Add(this.btnSetAll);
             this.panel1.Location = new System.Drawing.Point(10, 10);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(449, 412);
+            this.panel1.Size = new System.Drawing.Size(449, 445);
             this.panel1.TabIndex = 8;
             // 
             // label6
@@ -257,9 +258,8 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoValidate = System.Windows.Forms.AutoValidate.EnableAllowFocusChange;
-            this.ClientSize = new System.Drawing.Size(473, 471);
+            this.ClientSize = new System.Drawing.Size(463, 462);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.btnAdd);
             this.Name = "MultiForm";
             this.Text = "Reserve multiple days";
             this.Load += new System.EventHandler(this.MultiForm_Load_1);

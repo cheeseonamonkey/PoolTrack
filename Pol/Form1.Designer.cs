@@ -62,7 +62,9 @@
             this.btnMulti = new System.Windows.Forms.Button();
             this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.lblCount = new System.Windows.Forms.Label();
+            this.lblAvailable = new System.Windows.Forms.Label();
+            this.lblUnavailable = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -82,9 +84,9 @@
             this.listView.FullRowSelect = true;
             this.listView.GridLines = true;
             this.listView.HideSelection = false;
-            this.listView.Location = new System.Drawing.Point(12, 119);
+            this.listView.Location = new System.Drawing.Point(12, 127);
             this.listView.Name = "listView";
-            this.listView.Size = new System.Drawing.Size(901, 343);
+            this.listView.Size = new System.Drawing.Size(901, 332);
             this.listView.TabIndex = 0;
             this.listView.UseCompatibleStateImageBehavior = false;
             this.listView.View = System.Windows.Forms.View.Details;
@@ -145,9 +147,11 @@
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.txtGuest);
             this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.lblAvailable);
+            this.panel1.Controls.Add(this.lblUnavailable);
             this.panel1.Location = new System.Drawing.Point(12, 9);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(546, 90);
+            this.panel1.Size = new System.Drawing.Size(546, 99);
             this.panel1.TabIndex = 1;
             // 
             // label3
@@ -188,6 +192,7 @@
             this.datePicker.Name = "datePicker";
             this.datePicker.Size = new System.Drawing.Size(102, 23);
             this.datePicker.TabIndex = 4;
+            this.datePicker.ValueChanged += new System.EventHandler(this.datePicker_ValueChanged);
             // 
             // timePicker
             // 
@@ -201,6 +206,7 @@
             this.timePicker.Size = new System.Drawing.Size(102, 23);
             this.timePicker.TabIndex = 5;
             this.timePicker.Value = new System.DateTime(2020, 7, 18, 18, 0, 0, 0);
+            this.timePicker.ValueChanged += new System.EventHandler(this.timePicker_ValueChanged);
             // 
             // txtRoomNum
             // 
@@ -399,15 +405,37 @@
             this.linkLabel2.Text = "Tomorrow";
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
-            // label4
+            // lblCount
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(13, 103);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(48, 13);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Showing";
+            this.lblCount.AutoSize = true;
+            this.lblCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCount.Location = new System.Drawing.Point(17, 111);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(57, 13);
+            this.lblCount.TabIndex = 13;
+            this.lblCount.Text = "Showing 0";
+            // 
+            // lblAvailable
+            // 
+            this.lblAvailable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.lblAvailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAvailable.Location = new System.Drawing.Point(201, 78);
+            this.lblAvailable.Name = "lblAvailable";
+            this.lblAvailable.Size = new System.Drawing.Size(65, 12);
+            this.lblAvailable.TabIndex = 14;
+            this.lblAvailable.Text = "Available";
+            this.lblAvailable.Visible = false;
+            // 
+            // lblUnavailable
+            // 
+            this.lblUnavailable.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(224)))), ((int)(((byte)(192)))));
+            this.lblUnavailable.Font = new System.Drawing.Font("Microsoft Sans Serif", 7F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblUnavailable.Location = new System.Drawing.Point(201, 79);
+            this.lblUnavailable.Name = "lblUnavailable";
+            this.lblUnavailable.Size = new System.Drawing.Size(65, 12);
+            this.lblUnavailable.TabIndex = 15;
+            this.lblUnavailable.Text = "Unavailable";
+            this.lblUnavailable.Visible = false;
             // 
             // Form1
             // 
@@ -415,7 +443,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.GhostWhite;
             this.ClientSize = new System.Drawing.Size(917, 567);
-            this.Controls.Add(this.label4);
+            this.Controls.Add(this.lblCount);
             this.Controls.Add(this.btnMulti);
             this.Controls.Add(this.btnChange);
             this.Controls.Add(this.ckbShowOnlyFuture);
@@ -478,7 +506,9 @@
         private System.Windows.Forms.Button btnMulti;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblCount;
+        private System.Windows.Forms.Label lblAvailable;
+        private System.Windows.Forms.Label lblUnavailable;
     }
 }
 
