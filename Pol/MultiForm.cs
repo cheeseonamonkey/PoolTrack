@@ -67,13 +67,20 @@ namespace Pol
                 }
 
                 
-
-                foreach (var v in reservationsToAdd)
+                if(reservationsToAdd.Count == 0)
                 {
-                    Program.reservationList.Add(v);
-                }
+                    //dialog box here saying 'no reservations added'
 
-                Program.SaveLists();
+                }else
+                {
+                    foreach (var v in reservationsToAdd)
+                    {
+                        Program.reservationList.Add(v);
+                    }
+
+                    Program.SaveLists();
+                }
+                
 
                 this.Close();
                 this.Dispose();
