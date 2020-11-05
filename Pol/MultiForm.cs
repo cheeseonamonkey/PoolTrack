@@ -29,6 +29,12 @@ namespace Pol
                 List<Reservation> reservationsToAdd = new List<Reservation>();
                 //      reservationsToAdd.Clear();
 
+                if (txtRoomNum.Text.Equals(""))
+                {
+                    //alert here?
+                    throw new Exception("Error - Must include room #");
+                }
+
 
                 for (int i = 0; i < timePickerList.Count; i++)
                 {
@@ -54,26 +60,13 @@ namespace Pol
                         else if (dialogResult == DialogResult.No)
                             makeResBool = false;
 
-                    }
+                        if (makeResBool)
+                            reservationsToAdd.Add(new Reservation(dateTime, room, guest, employee));
 
-
-
-                    if (makeResBool)
-                        reservationsToAdd.Add(new Reservation(dateTime, room, guest, employee));
+                    } 
                 }
 
-
-
-
-                if (txtRoomNum.Text.Equals(""))
-                {
-                    //alert here?
-                    throw new Exception("Error - Must include room #");
-                }
-
-
-
-
+                
 
                 foreach (var v in reservationsToAdd)
                 {
@@ -85,7 +78,9 @@ namespace Pol
                 this.Close();
                 this.Dispose();
 
-            }catch(Exception exc)
+
+            }
+            catch(Exception exc)
             {
                 Console.WriteLine(exc.Message);
             }
