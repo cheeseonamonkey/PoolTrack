@@ -84,6 +84,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtComment);
             this.Name = "CommentForm";
+            this.ShowIcon = false;
             this.Text = "Comment";
             this.Load += new System.EventHandler(this.CommentForm_Load);
             this.ResumeLayout(false);

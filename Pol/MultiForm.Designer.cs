@@ -261,6 +261,7 @@
             this.ClientSize = new System.Drawing.Size(463, 462);
             this.Controls.Add(this.panel1);
             this.Name = "MultiForm";
+            this.ShowIcon = false;
             this.Text = "Reserve multiple days";
             this.Load += new System.EventHandler(this.MultiForm_Load_1);
             this.panel1.ResumeLayout(false);

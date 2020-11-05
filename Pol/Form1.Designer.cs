@@ -151,7 +151,7 @@
             this.panel1.Controls.Add(this.lblUnavailable);
             this.panel1.Location = new System.Drawing.Point(12, 9);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(546, 99);
+            this.panel1.Size = new System.Drawing.Size(516, 99);
             this.panel1.TabIndex = 1;
             // 
             // label3
@@ -176,9 +176,9 @@
             // btnAdd
             // 
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(454, 46);
+            this.btnAdd.Location = new System.Drawing.Point(422, 52);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(79, 34);
+            this.btnAdd.Size = new System.Drawing.Size(85, 38);
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -259,7 +259,7 @@
             // 
             this.ckbShowOnlyToday.AutoSize = true;
             this.ckbShowOnlyToday.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbShowOnlyToday.Location = new System.Drawing.Point(570, 86);
+            this.ckbShowOnlyToday.Location = new System.Drawing.Point(551, 86);
             this.ckbShowOnlyToday.Name = "ckbShowOnlyToday";
             this.ckbShowOnlyToday.Size = new System.Drawing.Size(136, 22);
             this.ckbShowOnlyToday.TabIndex = 3;
@@ -357,7 +357,7 @@
             this.ckbShowOnlyFuture.Checked = true;
             this.ckbShowOnlyFuture.CheckState = System.Windows.Forms.CheckState.Checked;
             this.ckbShowOnlyFuture.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ckbShowOnlyFuture.Location = new System.Drawing.Point(706, 86);
+            this.ckbShowOnlyFuture.Location = new System.Drawing.Point(693, 87);
             this.ckbShowOnlyFuture.Name = "ckbShowOnlyFuture";
             this.ckbShowOnlyFuture.Size = new System.Drawing.Size(137, 22);
             this.ckbShowOnlyFuture.TabIndex = 10;
@@ -379,7 +379,7 @@
             // btnMulti
             // 
             this.btnMulti.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnMulti.Location = new System.Drawing.Point(112, 468);
+            this.btnMulti.Location = new System.Drawing.Point(109, 468);
             this.btnMulti.Name = "btnMulti";
             this.btnMulti.Size = new System.Drawing.Size(81, 41);
             this.btnMulti.TabIndex = 12;
@@ -464,6 +464,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.listView);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(933, 606);
             this.MinimumSize = new System.Drawing.Size(933, 606);
             this.Name = "Form1";

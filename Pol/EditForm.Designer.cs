@@ -155,6 +155,7 @@
             this.Controls.Add(this.btnComment);
             this.Controls.Add(this.panel1);
             this.Name = "EditForm";
+            this.ShowIcon = false;
             this.Text = "EditForm";
             this.Load += new System.EventHandler(this.EditForm_Load);
             this.panel1.ResumeLayout(false);

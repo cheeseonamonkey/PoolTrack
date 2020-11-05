@@ -97,6 +97,7 @@
             this.Controls.Add(this.txtEmployeeAdd);
             this.Controls.Add(this.listViewEmployees);
             this.Name = "EmployeesForm";
+            this.ShowIcon = false;
             this.Text = "Employee list";
             this.Load += new System.EventHandler(this.EmployeesForm_Load);
             this.ResumeLayout(false);
