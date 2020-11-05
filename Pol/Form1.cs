@@ -64,7 +64,7 @@ namespace Pol
                 UpdateAvailabilityLabel();
 
             }
-            catch (Exception exc) { }
+            catch (Exception exc) {}
         }
 
         //populate the whole list

@@ -278,10 +278,12 @@
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Sort";
+            this.groupBox1.Visible = false;
             // 
             // rdbSortByRoom
             // 
             this.rdbSortByRoom.AutoSize = true;
+            this.rdbSortByRoom.Enabled = false;
             this.rdbSortByRoom.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbSortByRoom.Location = new System.Drawing.Point(6, 42);
             this.rdbSortByRoom.Name = "rdbSortByRoom";
@@ -289,12 +291,14 @@
             this.rdbSortByRoom.TabIndex = 1;
             this.rdbSortByRoom.Text = "Sort by room";
             this.rdbSortByRoom.UseVisualStyleBackColor = true;
+            this.rdbSortByRoom.Visible = false;
             this.rdbSortByRoom.CheckedChanged += new System.EventHandler(this.rdbSortByRoom_CheckedChanged);
             // 
             // rdbSortByTime
             // 
             this.rdbSortByTime.AutoSize = true;
             this.rdbSortByTime.Checked = true;
+            this.rdbSortByTime.Enabled = false;
             this.rdbSortByTime.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbSortByTime.Location = new System.Drawing.Point(6, 17);
             this.rdbSortByTime.Name = "rdbSortByTime";
@@ -303,6 +307,7 @@
             this.rdbSortByTime.TabStop = true;
             this.rdbSortByTime.Text = "Sort by time";
             this.rdbSortByTime.UseVisualStyleBackColor = true;
+            this.rdbSortByTime.Visible = false;
             this.rdbSortByTime.CheckedChanged += new System.EventHandler(this.rdbSortByTime_CheckedChanged);
             // 
             // btnComment
@@ -385,9 +390,10 @@
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Location = new System.Drawing.Point(172, 6);
+            this.linkLabel1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Location = new System.Drawing.Point(172, 10);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(37, 13);
+            this.linkLabel1.Size = new System.Drawing.Size(35, 13);
             this.linkLabel1.TabIndex = 9;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Today";
@@ -397,9 +403,10 @@
             // 
             this.linkLabel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.linkLabel2.AutoSize = true;
-            this.linkLabel2.Location = new System.Drawing.Point(223, 6);
+            this.linkLabel2.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel2.Location = new System.Drawing.Point(224, 10);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(54, 13);
+            this.linkLabel2.Size = new System.Drawing.Size(52, 13);
             this.linkLabel2.TabIndex = 10;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Tomorrow";
