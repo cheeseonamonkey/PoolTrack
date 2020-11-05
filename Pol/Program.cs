@@ -47,7 +47,7 @@ namespace Pol
             System.IO.File.WriteAllText("emp.dat", edat);
         }
 
-        public static void LoadLists()
+        public static void LoadLists() //todo: streamline loading/saving & populating lists 
         {
             if (File.Exists("res.dat"))
             {

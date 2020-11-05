@@ -68,7 +68,7 @@ namespace Pol
         }
 
         //populate the whole list
-        public void PopulateList()
+        public void PopulateList()  //todo: streamline all of this list-building spaghetti - in here, AddResToList, and AddReservation especially
         {
 
             listView.Items.Clear();
@@ -188,11 +188,9 @@ namespace Pol
         //add button==========================================================================
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            try
+            try //todo: better way to do the room # check than try/catch
             {
                  
-
-
                 if (txtRoomNum.Text.Equals(""))
                 {
                     //alert here?
