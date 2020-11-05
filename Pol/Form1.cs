@@ -375,6 +375,14 @@ namespace Pol
             PopulateList();
         }
 
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            datePicker.Value = DateTime.Today;
+        }
 
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            datePicker.Value = DateTime.Today.AddDays(1);
+        }
     }
 }
