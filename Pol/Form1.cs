@@ -190,7 +190,7 @@ namespace Pol
         {
             try
             {
-
+                 
 
 
                 if (txtRoomNum.Text.Equals(""))
