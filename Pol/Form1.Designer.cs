@@ -382,11 +382,11 @@
             // 
             // btnLoad
             // 
-            this.btnLoad.Location = new System.Drawing.Point(80, 526);
+            this.btnLoad.Location = new System.Drawing.Point(81, 526);
             this.btnLoad.Name = "btnLoad";
-            this.btnLoad.Size = new System.Drawing.Size(60, 37);
+            this.btnLoad.Size = new System.Drawing.Size(78, 37);
             this.btnLoad.TabIndex = 7;
-            this.btnLoad.Text = "manual load";
+            this.btnLoad.Text = "manual load/refresh";
             this.btnLoad.UseVisualStyleBackColor = true;
             this.btnLoad.Click += new System.EventHandler(this.btnLoad_Click);
             // 

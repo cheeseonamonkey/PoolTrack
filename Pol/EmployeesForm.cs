@@ -34,7 +34,7 @@ namespace Pol
 
             txtEmployeeAdd.Clear();
 
-            Program.employeeList.Add(nam);
+            Program.employeeList.Add(nam); 
             listViewEmployees.Items.Add(nam);
 
             Program.SaveLists();
@@ -67,6 +67,11 @@ namespace Pol
             }
 
             Program.SaveLists();
+        }
+
+        private void btnEdit_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
